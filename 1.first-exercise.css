@@ -1,0 +1,143 @@
+/* general style */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style for header */
+header {
+  position: relative;
+  background-color: palegreen;
+  height: 100px;
+  color: darkgreen;
+  margin-bottom: 40px;
+}
+header h1 {
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* style for card */
+.card-wraper {
+  overflow: hidden;
+  position: relative;
+  width: 460px;
+  margin: 0 auto;
+  padding: 5px;
+  box-shadow: 3px 3px 8px silver;
+}
+.card {
+  position: relative;
+  width: 450px;
+  height: 200px;
+  margin: 0 auto;
+}
+.card img {
+  max-width: 100%;
+  height: 100%;
+  margin-right: 15px;
+  float: left;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  display: block;
+  border: 1px solid #878e96;
+  height: 200px;
+  text-align: left;
+  padding: 20px 15px 0 0;
+}
+
+.container p {
+  margin: 15px 0 25px;
+  opacity: 0.8;
+}
+.container a {
+  background: #007bff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.container a:hover {
+  background: rgba(0, 123, 255, 0.7);
+}
+
+/* footer style */
+footer {
+  position: relative;
+  color: white;
+  height: 80px;
+  background-color: #121212;
+  margin-top: 40px;
+}
+footer p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+footer span {
+  color: palegreen;
+  text-transform: uppercase;
+}
+
+/** media query styles **/
+@media (max-width: 470px) {
+  /* media query for card */
+  .card-wraper {
+    width: 350px;
+    padding: 2px;
+    font-size: 13px;
+  }
+  .card {
+    width: 340px;
+    height: 150px;
+  }
+  .card img {
+    margin-right: 5px;
+  }
+
+  .container {
+    height: 150px;
+    padding: 7px 5px 0 0;
+  }
+
+  .container p {
+    margin: 5px 0 15px;
+  }
+  .container a {
+    padding: 6px 13px;
+  }
+
+  /* media query for header and footer */
+  header {
+    font-size: 14px;
+  }
+  header h1 {
+    position: relative;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+  footer p {
+    position: relative;
+    text-align: center;
+  }
+}
